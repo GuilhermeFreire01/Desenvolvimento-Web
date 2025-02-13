@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de funcionarios</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="titulo"> Cadastro de Funcionarios </h1>
+
+        <form class="formulario" id="formularioNovoFuncionario" onsubmit="cadastrarNovoFuncionario(event)">
+
+            <div class="campo">
+                <label class="rotulo" for="campoNomeFuncionario">Nome do Funcionario:</label>
+                <input class="campo-texto" type="text" id="campoNomeFuncionario" name="nomeFuncionario">
+            </div>
+
+            <div class="campo">
+                <label class="rotulo" for="campoCpfFuncionario">CPF do Funcionario:</label>
+                <input class="campo-texto" type="text" id="campoCpfFuncionario" name="cpfFuncionario">
+            </div>
+
+            <div class="campo">
+                <label class="rotulo" for="campoDataNascimentoFuncionario">Data de Nascimento:</label>
+                <input type="date" name="dataNascimentoFuncionario" id="campoDataNascimentoFuncionario">
+            </div>
+
+            <div class="campo">
+                <label for="campoCargoFuncionario">Selecione seu cargo:</label>
+                <select id="cargoFuncionario" name="cargoFuncionario">
+                    <option value="Vendedor">Vendedor</option>
+                    <option value="Gerente">Gerente</option>
+                    <option value="Analista">Analista</option>
+                    <option value="Outros">Outros</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <label class="rotulo" for="campoSalarioFuncionario">Salario:</label>
+                <input class="campo-texto" type="text" id="campoSalarioFuncionario" name="salarioFuncionario">
+            </div>
+
+            <div class="campo-select">
+                <label for="campoEstadosFuncionarios">Escolha um estado:</label>
+                <select id="campoEstadosFuncionario" name="estadosFuncionarios">
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+            </select>
+            </div>
+            
+
+            <div class="campo">
+                <label for="campoEstadoCivil">Estado Civil:</label>
+                <select id="campoEstadoCivilFuncionario" name="estadoCivil">
+                    <option value="solteiro">Solteiro(a)</option>
+                    <option value="casado">Casado(a)</option>
+                    <option value="divorciado">Divorciado(a)</option>
+                    <option value="viuvo">Viúvo(a)</option>
+                    <option value="separado">Separado(a)</option>
+                    <option value="uniao_estavel">União Estável</option>
+                </select>
+            </div>
+
+
+            <div class="botoes-form">
+                <button type="submit"> Enviar </button>
+                <button type="reset"> Limpar </button>
+            </div>
+
+        </form>
+    </div>
+
+    
+</body>
+</html>
