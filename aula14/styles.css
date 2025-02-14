@@ -1,0 +1,150 @@
+/* Reset básico para remover margens e paddings padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos gerais do corpo da página */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Container principal */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Título da página */
+.titulo {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+/* Estilos para o formulário */
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Estilos para cada campo do formulário */
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.campo label {
+    font-weight: 600;
+    color: #34495e;
+    font-size: 1rem;
+}
+
+.campo input[type="text"],
+.campo input[type="date"],
+.campo select {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+}
+
+.campo input[type="text"]:focus,
+.campo input[type="date"]:focus,
+.campo select:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+/* Estilos para o campo de seleção de estado civil */
+.campo-select {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.campo-select select {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Estilos para os botões */
+.botoes-form {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.botoes-form button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.botoes-form button[type="submit"] {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.botoes-form button[type="submit"]:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+.botoes-form button[type="reset"] {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+.botoes-form button[type="reset"]:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    .titulo {
+        font-size: 2rem;
+    }
+
+    .campo input[type="text"],
+    .campo input[type="date"],
+    .campo select {
+        font-size: 0.9rem;
+    }
+
+    .botoes-form {
+        flex-direction: column;
+    }
+
+    .botoes-form button {
+        width: 100%;
+    }
+}
